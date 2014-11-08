@@ -1,8 +1,7 @@
 # BGS Vote
-Voting App for inter-house singing competition. Made by [Edward Digby](http://twitter.com/ejdigby) and [James Brooks](http://twitter.com/jamesbrks).
+Voting application created for our school inter-house competitions. Made by [Edward Digby](http://twitter.com/ejdigby) and [James Brooks](http://twitter.com/jamesbrks).
 
-
-The Four Houses At Our School Are:
+Our school house system is as follows:
  - Rorschach
  - Behn
  - Meitner
@@ -10,26 +9,23 @@ The Four Houses At Our School Are:
 
 
 ### Setup
-To be able to run this app you will need to point the messaging request URL to: `yourdomainname.com:83/sms`
+Once the app is running, set your Twilio SMS URL to: `yourdomainname.com:83/sms`
 
-###Running
- 	`sudo nodejs server.js`
+### Running
+ 	node server.js
 
- This will start the express.io server on port 83.
+ This will start the Express server on port 83.
 
 ### Dependencies
-This App uses:
- - Express.io
+ - Express
  - Socket.io
- - Express-handlebars
+ - Express-Handlebars
  - Twilio
 
-###Structure
-Directory Structure:
+### Structure
 ```	
-	.
 	├── server.js
-	├── package.js
+	├── package.json
 	└── views
 	    ├── index.handlebars
 	    ├── css
