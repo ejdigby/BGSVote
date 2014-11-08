@@ -114,7 +114,7 @@ var sendText = function(number, house){
 		 mbody = ("Thank You For Voting For " + house);
 	} 
   
-  var client = require('twilio')(accountSid, authToken);
+  var client = require('twilio')(config.accountSid, config.authToken);
   client.messages.create({
 	to: number,
 	from:'+442033897054',
