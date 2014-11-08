@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Singing Competition Vote</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+	<script src="js/houses.js"></script>
+</head>
+<body>
+        <div id="main">
+                <header id="school">
+                        <img src="images/logo.png">
+                </header>
+                <div id="scores">
+                        <h1>House Singing Competition</h1>
+						<div id="instructions">
+                        <h2 class="howToVote">Vote for <span class="houseName"></span> by texting <span class="houseLetter"></span> to <i>020 3389 7054</i></h2>
+                        </div>
+                        <div class="behn">
+                                <img src="images/behn.png">
+                                <div id="Behn"><h2 class="BehnScore"></h2></div>
+                        </div>
+                        <div class="meitner">
+                                <img src="images/meitner.png">
+                                <h2 class="MeitnerScore"><h2>
+                        </div>
+                        <div class="rorschach">
+                                <img src="images/rorschach.png">
+                                <h2 class="RorschachScore"><h2>
+                        </div>
+                        <div class="tinbergen">
+                                <img src="images/tinbergen.png">
+                                <h2 class="TinbergenScore"><h2>
+                        </div>
+                </div>
+        </div>  
+        <script>
+        behnscore = parseInt("{{Behn}}");
+        meitnerscore = parseInt("{{Meitner}}");
+        rorschachscore = parseInt("{{Rorschach}}");
+        tinbergenscore  = parseInt("{{Tinbergen}}");
+
+        $('.BehnScore').text(behnscore) 
+        $('.MeitnerScore').text(meitnerscore) 
+        $('.RorschachScore').text(rorschachscore) 
+        $('.TinbergenScore').text(tinbergenscore) 
+
+         io = io.connect()
+
+         io.emit('ready')
+
+         io.on('addonebehn', function() {
+            behnscore++;
+            $(".BehnScore").innerHTML = "";
+            $('.BehnScore').text(behnscore);
+         })
+         io.on('addonerorschach', function() {
+            rorschachscore++;
+            $(".RorschachScore").innerHTML = "";
+            $('.RorschachScore').text(rorschachscore);
+         })
+         io.on('addonemeitner', function() {
+            meitnerscore++;
+            $(".MeitnerScore").innerHTML = "";
+            $('.MeitnerScore').text(meitnerscore);
+         })
+         io.on('addonetinbergen', function() {
+            tinbergenscore++;
+            $(".TinbergenScore").innerHTML = "";
+            $('.TinbergenScore').text(tinbergenscore);
+         })
+        </script>
+</html>
