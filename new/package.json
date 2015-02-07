@@ -1,0 +1,9 @@
+{
+  "name": "bgs-vote",
+  "version": "0.1.0",
+  "description": "Voting application for the Bourne Grammar School signing competition",
+  "dependencies": {
+    "express-handlebars": "^1.1.0",
+    "express.io": "^1.1.13",
+  }
+}

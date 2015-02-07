@@ -1,0 +1,112 @@
+html,
+	body {
+		height: 100%;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	#main {
+		height: 100%;
+		text-align: center;
+		font-size: 0;
+	}
+
+	#main:before {
+  		content: '';
+  		display: inline-block;
+  		height: 100%;
+  		vertical-align: middle;
+	}
+
+	#scores {
+		display: inline-block;
+  		vertical-align: middle;
+	}
+
+	#scores h1 {
+		font-size: 72px;
+		color: black;
+		font-weight: bold;
+		font-family: 'Open Sans';
+	}
+
+	#instructions {
+		height: 90px;
+	}
+
+	.howToVote {
+		font-size: 36px;
+		color: black;
+		font-weight: normal;
+		font-family: 'Open Sans';
+		display: none;
+		line-height: 90px;
+	}
+
+	#scores span {
+		font-weight: bold;
+	}
+
+	#school {
+		border-bottom: solid 3px #efefef;
+		background-color: #ffffff;
+		position: absolute;
+		height: 60px;
+		width: 100%;
+		top: 0;
+	}
+
+	#school img {
+		height: 60px;
+		margin: 0 auto;
+		display: block;
+		float: none;
+	}
+
+	.behn, .meitner, .rorschach, .tinbergen {
+		width: 175px;
+		height: 175px;
+		display: inline-block;
+		border-radius: 100%;
+		-moz-border-radius: 100%;
+		-webkit-border-radius: 100%;
+		margin: 50px;
+	}
+
+	.behn h2, .meitner h2, .rorschach h2, .tinbergen h2 {
+		font-size: 72px;
+		margin-top: 20px;
+		font-family: 'Lilita One'
+	}
+
+	.behn {
+		background-color: #AC10BA;
+		color: #AC10BA;
+	}
+
+	.meitner {
+		background-color: #ED6000;
+		color: #ED6000;
+	}
+
+	.rorschach {
+		background-color: #17BA00;
+		color: #17BA00;
+	}
+
+	.tinbergen {
+		background-color: #1264C9;
+		color: #1264C9;
+	}
+
+	.behn img, .meitner img, .rorschach img, .tinbergen img {
+		margin: 28px;
+		width: 120px;
+	}
